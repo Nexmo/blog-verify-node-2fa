@@ -1,0 +1,27 @@
+{
+  "name": "blog-verify-node-2fa",
+  "version": "1.0.0",
+  "description": "Implement two-factor authentication in Node.js using Express and the Vonage Verify API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliacodez/blog-verify-node-2fa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/juliacodez/blog-verify-node-2fa/issues"
+  },
+  "homepage": "https://github.com/juliacodez/blog-verify-node-2fa#readme",
+  "dependencies": {
+    "@vonage/server-sdk": "^3.25.1",
+    "@vonage/verify2": "^1.17.1",
+    "express": "^5.2.1",
+    "nunjucks": "^3.2.4"
+  }
+}
