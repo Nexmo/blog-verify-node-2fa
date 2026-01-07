@@ -24,6 +24,28 @@ app.get('/', (req, res) => {
   res.render('index.html', { message: 'Hello, world!' })
 });
 
+app.post('/verify', (req, res) => {
+    
+    vonage.verify2.newRequest({
+      brand: VERIFY_BRAND_NAME,
+      workflow: [
+        {
+          channel: Channels.SMS,
+          to: req.body.number,
+        },
+      ],
+    })
+      .then(({requestId}) => {
+        res.render('check.html', { requestId: requestId })
+
+      })
+      .catch((err) => {
+        console.error(err);
+        res.render('index.html', { message: err });
+
+      });
+})
+
 app.listen(3000, () => {
   console.log('Example app listening on port 3000')
 });
